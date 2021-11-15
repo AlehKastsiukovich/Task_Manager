@@ -8,6 +8,7 @@ object AppDependencies {
     const val app_compat = "androidx.appcompat:appcompat:1.3.1"
     const val material = "com.google.android.material:material:1.4.0"
     const val constraint_layout = "androidx.constraintlayout:constraintlayout:2.1.1"
+    const val lifecycle_java_8 = "androidx.lifecycle:lifecycle-common-java8:2.3.1"
 }
 
 object NavDependencies {

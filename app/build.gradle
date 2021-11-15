@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -29,6 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -39,6 +44,7 @@ dependencies {
     implementation (AppDependencies.app_compat)
     implementation (AppDependencies.material)
     implementation (AppDependencies.constraint_layout)
+    implementation(AppDependencies.lifecycle_java_8)
 
     testImplementation(TestDependencies.junit)
     testImplementation(TestDependencies.mockk)
