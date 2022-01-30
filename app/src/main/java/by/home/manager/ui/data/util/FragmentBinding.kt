@@ -1,4 +1,4 @@
-package by.home.manager.ui.binding
+package by.home.manager.ui.data.util
 
 import android.view.View
 import androidx.fragment.app.Fragment
