@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.presentation.MainActivity">
 
-    <include
-        android:id="@+id/topBar"
-        layout="@layout/toolbar_fragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -24,5 +17,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

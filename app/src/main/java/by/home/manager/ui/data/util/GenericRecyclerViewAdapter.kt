@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import androidx.compose.ui.platform.ComposeView
 import androidx.recyclerview.widget.RecyclerView
 
 class GenericRecyclerViewAdapter<T : Any>(
@@ -31,13 +32,16 @@ class GenericRecyclerViewAdapter<T : Any>(
 
     override fun getItemCount(): Int = itemList.size
 
-    class TaskViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    class TaskViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        private val composeView = view as ComposeView
+
         fun <T : Any> bind(item: T, bindingInterface: BindingInterface<T>) {
-            bindingInterface.bind(item, view)
+            bindingInterface.bind(item, composeView)
         }
     }
 }
 
 interface BindingInterface<T> {
-    fun bind(item: T, view: View)
+    fun bind(item: T, composeView: ComposeView)
 }
