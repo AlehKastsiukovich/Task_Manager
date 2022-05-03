@@ -27,6 +27,10 @@ class TasksRepositoryImpl @Inject constructor (
     override suspend fun removeTask(task: TaskItem) {
         appDatabase.taskDao().removeTask(taskItemToTask(task))
     }
+
+    override suspend fun updateTask(task: TaskItem) {
+        appDatabase.taskDao().updateTask(taskItemToTask(task))
+    }
 }
 
 fun taskItemToTask(taskItem: TaskItem): Task = Task(

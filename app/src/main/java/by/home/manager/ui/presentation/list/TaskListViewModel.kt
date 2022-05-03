@@ -30,4 +30,16 @@ class TaskListViewModel @Inject constructor(
             useCase.removeTask(taskItem)
         }
     }
+
+    fun addTask(item: TaskItem) {
+        viewModelScope.launch(Dispatchers.IO) {
+            useCase.addTask(item)
+        }
+    }
+
+    fun updateTask(item: TaskItem) {
+        viewModelScope.launch(Dispatchers.IO) {
+            useCase.updateTask(item)
+        }
+    }
 }

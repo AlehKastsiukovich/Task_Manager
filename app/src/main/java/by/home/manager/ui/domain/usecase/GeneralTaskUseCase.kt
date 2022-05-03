@@ -11,4 +11,6 @@ class GeneralTaskUseCase(private val repository: TaskRepository) {
     suspend fun addTask(taskItem: TaskItem) = repository.addTask(taskItem)
 
     suspend fun removeTask(taskItem: TaskItem) = repository.removeTask(taskItem)
+
+    suspend fun updateTask(taskItem: TaskItem) = repository.updateTask(taskItem)
 }
